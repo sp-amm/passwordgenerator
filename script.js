@@ -1,6 +1,10 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+//Capturing the input for the parameters to generate the password
+const passwordLength = prompt("How many characters do you want in your password?",);
+ 
+
 //Array for characters to be input to the password generator function
 
 const passwordCharacter = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", 
@@ -14,10 +18,14 @@ const passwordCharacter = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
 
 
 
-//Function to generate random number
-function getNumber() {
-  Math.floor(Math.random() * 
+//Function to loop through the array the numbers of times set by the  generate random characters from the array
+//function getChar() {
+  //for (var i = (Math.floor(Math.random() * 78); i < passwordLength; i++) {
+  //        result = passwordCharacter[];
+ // }
+  // }
 }
+
 
 // Write password to the #password input
 function writePassword() {

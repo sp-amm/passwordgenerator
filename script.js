@@ -1,8 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-//Capturing the input for the parameters to generate the password
-const passwordLength = prompt("How many characters do you want in your password?",);
+
  
 
 //Array for characters to be input to the password generator function
@@ -38,3 +37,13 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+//Capturing the input for the parameters to generate the password
+var passwordLength = prompt("How many characters do you want in your password?");
+console.log(passwordLength);
+
+var passwordUppercase = confirm("Do You want Upercase letters in your password?");
+
+var passwordLowercase = confirm("Do you want lowercase letters in your password?");
+
+var passwordSpecial = confirm("Do you want special characters in your password?");

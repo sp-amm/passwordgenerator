@@ -7,11 +7,16 @@
     <title>Password Generator</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+  
   <body>
     <div class="wrapper">
+      
+      <!--Heading-->
       <header>
         <h1>Password Generator</h1>
       </header>
+      
+      <!--Content-->
       <div class="card">
         <div class="card-header">
           <h2>Generate a Password</h2>
@@ -24,11 +29,29 @@
             aria-label="Generated Password"
           ></textarea>
         </div>
+        
+        <!--Generate Password Button-->
         <div class="card-footer">
           <button id="generate" class="btn">Generate Password</button>
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
+    <!--<script src="script.js"></script>-->
+    <script>
+      //Attempting to figure out what works because nothing I do in the JS file is doing anything except throwing up errors
+      let length = prompt("How many characters in your password length?");
+      let upper = confirm("Any uppercase?");
+      let lower = confirm("Any lowercase?");
+      let special = confirm("Any special characters?");
+      let number = confirm("Any numbers?");
+
+      var pwrd = 
+      //This line of code taken from https://stackoverflow.com/users/2977175/tofandel
+      //All credit to Tofandel
+new Array(length*1).fill().map(() => String.fromCharCode(Math.random()*86+40)).join("");
+console.log(pwrd);
+
+    </script>
+
   </body>
 </html>

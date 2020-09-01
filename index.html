@@ -47,9 +47,18 @@
 
       var pwrd = 
       //This line of code taken from https://stackoverflow.com/users/2977175/tofandel
+      //Modified code by adding length variable and *1 to turn it into a number.
       //All credit to Tofandel
-new Array(length*1).fill().map(() => String.fromCharCode(Math.random()*86+40)).join("");
-console.log(pwrd);
+      new Array(length*1).fill().map(() => String.fromCharCode(Math.random()*86+40)).join("");
+      console.log(pwrd);
+
+      if (upper===true && lower === false) {
+        pwrd = pwrd.toUpperCase();
+        console.log(pwrd);
+      }
+
+
+
 
     </script>
 

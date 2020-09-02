@@ -52,6 +52,12 @@
       new Array(length*1).fill().map(() => String.fromCharCode(Math.random()*86+40)).join("");
       console.log(pwrd);
 
+      if (upper === false && lower === false && special === false && number === false) {
+        alert("You need to choose at least on type of character.");
+        pwrd = 0;
+        console.log(pwrd);
+      }
+      
       if (upper===true && lower === false) {
         pwrd = pwrd.toUpperCase();
         console.log(pwrd);
@@ -62,7 +68,13 @@
         console.log(pwrd);
       }
 
+      //else if (upper===false && lower === false) {
+       // pwrd = str.replace(/[a-z|A-Z/g], )
+      //}
 
+      else {
+        console.log(pwrd);
+      }
 
 
     </script>

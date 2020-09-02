@@ -4,6 +4,16 @@ var generateBtn = document.querySelector("#generate");
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+var passwordLength = prompt ("How many characters in your password?");
+
+var numChar = confirm("Do you want numbers in your password?");
+
+var upperCase = confirm("Do You want Uppercase letters in your password?");
+
+var lowerCase = confirm("Do you want lowercase letters in your password?");
+
+var special = confirm("Do you want special characters in your password?");
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -12,15 +22,7 @@ function writePassword() {
   passwordText.value = password;
   }
 
-var passwordLength = prompt ("How many characters in your password?");
 
-//var numChar = confirm("Do you want numbers in your password?");
-
-//var upperCase = confirm("Do You want Uppercase letters in your password?");
-
-//var lowerCase = confirm("Do you want lowercase letters in your password?");
-
-//var special = confirm("Do you want special characters in your password?");
 
 
 //Array for characters to be input to the password generator function

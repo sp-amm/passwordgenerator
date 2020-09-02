@@ -38,7 +38,9 @@
     </div>
     <!--<script src="script.js"></script>-->
     <script>
-      //Attempting to figure out what works because nothing I do in the JS file is doing anything except throwing up errors
+
+     
+     //Attempting to figure out what works because nothing I do in the JS file is doing anything except throwing up errors
       let length = prompt("How many characters in your password length?");
       let upper = confirm("Any uppercase?");
       let lower = confirm("Any lowercase?");
@@ -68,13 +70,12 @@
         console.log(pwrd);
       }
 
-      //else if (upper===false && lower === false) {
-       // pwrd = str.replace(/[a-z|A-Z/g], )
-      //}
+      else if (upper===false && lower === false) {
+          pwrd = pwrd.replace(/[a-z]/g, "#");
+          pwrd = pwrd.replace(/[A-Z]/g, "3");
+          console.log(pwrd);
+        };
 
-      else {
-        console.log(pwrd);
-      }
 
 
     </script>

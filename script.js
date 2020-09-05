@@ -8,9 +8,10 @@ generateBtn.addEventListener("click", writePassword);
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
+  console.log(password);
   var passwordText = document.getElementById("password");
 
-  passwordText.value = password;
+  passwordText.innerHTML = password;
   }
 
  function generatePassword(){
@@ -62,7 +63,7 @@ function writePassword() {
 
    console.log(password);
 
-   return generatePassword(password);
+   return password;
   
   };
  

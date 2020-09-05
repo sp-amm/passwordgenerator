@@ -47,11 +47,37 @@
       let special = confirm("Any special characters?");
       let number = confirm("Any numbers?");
 
+           
+      
+      const passwordChar = [];
+
+      if (number === true) {
+       passwordChar.push("0", "1", "2", "3", "4", "5", "6", "7", "8", "9");
+       console.log(passwordChar);
+      };
+
+      if (special === true) {
+        passwordChar.push("!", "@", "#", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "?", ",", "~");
+        console.log(passwordChar);
+      }
+
+      if (upper === true) {
+        passwordChar.push("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z");
+        console.log(passwordChar);
+      }
+
+      if (lower === true) {
+        passwordChar.push("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z")
+        console.log(passwordChar);
+      }
+
+      
+
       var pwrd = 
       //This line of code taken from https://stackoverflow.com/users/2977175/tofandel
       //Modified code by adding length variable and *1 to turn it into a number.
       //All credit to Tofandel
-      new Array(length*1).fill().map(() => String.fromCharCode(Math.random()*86+40)).join("");
+      new Array(length*1).fill().map(() => passwordChar[(Math.random()*78)]).join("");
       console.log(pwrd);
 
       if (upper === false && lower === false && special === false && number === false) {

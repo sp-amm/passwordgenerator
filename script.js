@@ -24,7 +24,7 @@ function writePassword() {
  let number = confirm("Any numbers?");
 
       
- //Creating the array with the selected charaters
+ //Creating the array with the selected characters
  const passwordChar = [];
 
  if (number === true) {
@@ -56,10 +56,9 @@ function writePassword() {
  
  //Generating random password from array
    password = "";
-   for (var i=0; i <= passwordChar.length; i++) {       
+   for (var i=0; i <= passwordLength; i++) {       
    password += passwordChar[Math.floor(Math.random()*passwordChar.length)];
    }
-
 
    console.log(password);
 

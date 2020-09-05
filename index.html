@@ -36,88 +36,8 @@
         </div>
       </div>
     </div>
-    <!--<script src="script.js"></script>-->
-    <script>
+    <script src="script.js"></script>
 
-     
-     //Attempting to figure out what works because nothing I do in the JS file is doing anything except throwing up errors
-      let passwordLength = prompt("How many characters in your password length?");
-      let upper = confirm("Any uppercase?");
-      let lower = confirm("Any lowercase?");
-      let special = confirm("Any special characters?");
-      let number = confirm("Any numbers?");
-
-           
-      
-      const passwordChar = [];
-
-      if (number === true) {
-       passwordChar.push("0", "1", "2", "3", "4", "5", "6", "7", "8", "9");
-       console.log(passwordChar);
-      };
-
-      if (special === true) {
-        passwordChar.push("!", "@", "#", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "?", ",", "~");
-        console.log(passwordChar);
-      }
-
-      if (upper === true) {
-        passwordChar.push("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z");
-        console.log(passwordChar);
-      }
-
-      if (lower === true) {
-        passwordChar.push("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z")
-        console.log(passwordChar);
-      }
-
-      if (upper === false && lower === false && special === false && number === false) {
-        alert("You need to choose at least one type of character.");
-        pwrd = 0;
-        console.log(pwrd);
-      }
-
-      
-      //This line of code taken from https://stackoverflow.com/users/2977175/tofandel
-      //Modified code by adding length variable and *1 to turn it into a number.
-      //All credit to Tofandel
-      //new Array(passwordLength*1).fill().map(() => passwordChar[(Math.random()*passwordChar.length)]).join("");
-      //new Array(passwordLength*1).fill().map(x => passwordChar[Math.floor(Math.random()*passwordChar.length)]);
-      //pwrd.toString;
-      
-      //for (var i=0; i < passwordLength; i++) {
-      // var pwrd = passwordChar[Math.floor(Math.random()* passwordChar.length)];
-      // return pwrd;
-      //};
-        pwrd = "";
-        for (var i=0; i <= passwordChar.length; i++) {       
-        pwrd += passwordChar[Math.floor(Math.random()*passwordChar.length)];
-        }
-
-
-        console.log(pwrd);
-
-
-      
-      //if (upper===true && lower === false) {
-      //  pwrd = pwrd.toUpperCase();
-      //  console.log(pwrd);
-     // }
-
-      //else if (upper===false && lower === true) {
-      //  pwrd = pwrd.toLowerCase();
-      //  console.log(pwrd);
-      //}
-
-      //else if (upper===false && lower === false) {
-      //    pwrd = pwrd.replace(/[a-z]/g, "#");
-      //    pwrd = pwrd.replace(/[A-Z]/g, "3");
-      //    console.log(pwrd);
-      //  };
-
-
-
-    </script>
 
   </body>
 </html>

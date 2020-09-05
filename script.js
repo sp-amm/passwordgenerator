@@ -16,12 +16,29 @@ function writePassword() {
 
  function generatePassword(){
  
- //Collecting user preference data
- let passwordLength = prompt("How many characters in your password length?");
+ //Collecting length information from user and setting parameters
+ let passwordLength = prompt("Choose number of characters in your password between 8 and 128?");
+ 
+
+ if (passwordLength < 8 || passwordLength > 128) {
+ alert("You need to choose a number between 8 and 128");
+ password = null;
+ return password;
+ }
+
+
+//Collecting user preferences
  let upper = confirm("Any uppercase?");
  let lower = confirm("Any lowercase?");
  let special = confirm("Any special characters?");
  let number = confirm("Any numbers?");
+
+
+ if (upper === false && lower === false && special === false && number === false) {
+  alert("You need to choose at least one type of character.");
+  password = NaN;
+  return password;
+ }
 
       
  //Creating the array with the selected characters
@@ -45,12 +62,6 @@ function writePassword() {
  if (lower === true) {
    passwordChar.push("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z")
    console.log(passwordChar);
- }
-
- if (upper === false && lower === false && special === false && number === false) {
-   alert("You need to choose at least one type of character.");
-   password = 0;
-   console.log(pwrd);
  }
 
  

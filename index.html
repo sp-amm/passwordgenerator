@@ -41,7 +41,7 @@
 
      
      //Attempting to figure out what works because nothing I do in the JS file is doing anything except throwing up errors
-      let length = prompt("How many characters in your password length?");
+      let passwordLength = prompt("How many characters in your password length?");
       let upper = confirm("Any uppercase?");
       let lower = confirm("Any lowercase?");
       let special = confirm("Any special characters?");
@@ -71,36 +71,49 @@
         console.log(passwordChar);
       }
 
-      
-
-      var pwrd = 
-      //This line of code taken from https://stackoverflow.com/users/2977175/tofandel
-      //Modified code by adding length variable and *1 to turn it into a number.
-      //All credit to Tofandel
-      new Array(length*1).fill().map(() => passwordChar[(Math.random()*78)]).join("");
-      console.log(pwrd);
-
       if (upper === false && lower === false && special === false && number === false) {
-        alert("You need to choose at least on type of character.");
+        alert("You need to choose at least one type of character.");
         pwrd = 0;
         console.log(pwrd);
       }
+
       
-      if (upper===true && lower === false) {
-        pwrd = pwrd.toUpperCase();
-        console.log(pwrd);
-      }
+      //This line of code taken from https://stackoverflow.com/users/2977175/tofandel
+      //Modified code by adding length variable and *1 to turn it into a number.
+      //All credit to Tofandel
+      //new Array(passwordLength*1).fill().map(() => passwordChar[(Math.random()*passwordChar.length)]).join("");
+      //new Array(passwordLength*1).fill().map(x => passwordChar[Math.floor(Math.random()*passwordChar.length)]);
+      //pwrd.toString;
+      
+      //for (var i=0; i < passwordLength; i++) {
+      // var pwrd = passwordChar[Math.floor(Math.random()* passwordChar.length)];
+      // return pwrd;
+      //};
+        pwrd = "";
+        for (var i=0; i <= passwordChar.length; i++) {       
+        pwrd += passwordChar[Math.floor(Math.random()*passwordChar.length)];
+        }
 
-      else if (upper===false && lower === true) {
-        pwrd = pwrd.toLowerCase();
-        console.log(pwrd);
-      }
 
-      else if (upper===false && lower === false) {
-          pwrd = pwrd.replace(/[a-z]/g, "#");
-          pwrd = pwrd.replace(/[A-Z]/g, "3");
-          console.log(pwrd);
-        };
+        console.log(pwrd);
+
+
+      
+      //if (upper===true && lower === false) {
+      //  pwrd = pwrd.toUpperCase();
+      //  console.log(pwrd);
+     // }
+
+      //else if (upper===false && lower === true) {
+      //  pwrd = pwrd.toLowerCase();
+      //  console.log(pwrd);
+      //}
+
+      //else if (upper===false && lower === false) {
+      //    pwrd = pwrd.replace(/[a-z]/g, "#");
+      //    pwrd = pwrd.replace(/[A-Z]/g, "3");
+      //    console.log(pwrd);
+      //  };
 
 
 
